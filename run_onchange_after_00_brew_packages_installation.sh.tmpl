@@ -1,6 +1,8 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+
 set -eufo pipefail
 
 brew update

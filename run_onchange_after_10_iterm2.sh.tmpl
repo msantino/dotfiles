@@ -1,0 +1,10 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+# Brewfile hash: {{ include "iterm2/iterm.plist" | sha256sum }}
+
+set -eufo pipefail
+
+defaults import com.googlecode.iterm2 iterm2/iterm.plist
+
+{{ end }}
