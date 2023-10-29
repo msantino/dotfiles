@@ -31,6 +31,9 @@ defaults write com.apple.dock tilesize -int 44
 # Set the icon magnification size of Dock items to 85 pixels
 defaults write com.apple.dock largesize -int 85
 
+# Enable magnification
+defaults write com.apple.dock magnification -int 1
+
 
 #################################################
 # Safari & WebKit                               #
