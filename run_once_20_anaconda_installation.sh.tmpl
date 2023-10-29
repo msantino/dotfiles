@@ -1,0 +1,12 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+brew update
+
+brew tap Homebrew/bundle
+brew bundle
+
+brew cleanup
+{{ end }}
