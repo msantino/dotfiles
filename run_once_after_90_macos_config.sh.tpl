@@ -87,36 +87,5 @@ defaults write com.apple.Terminal "Startup Window Settings" -string Pro
 # Profile: default Pro profile:
 defaults write com.apple.Terminal "Default Window Settings" -string Pro
 
-#################################################
-# iTerm2                                        #
-#################################################
-
-# 💡 echo nested values with "print"; use "set" to write values:
-#    /usr/libexec/PlistBuddy -c "print 'New Bookmarks':0:'Scrollback Lines'" ~/Library/Preferences/com.googlecode.iterm2.plist
-#    /usr/libexec/PlistBuddy -c "write 'New Bookmarks':0:'Scrollback Lines'" 10000 ~/Library/Preferences/com.googlecode.iterm2.plist
-
-# Appearance/Dimming: Dim background windows
-defaults write com.googlecode.iterm2 DimBackgroundWindows -bool true
-
-# Appearance/Dimming: Dimming amount
-defaults write com.googlecode.iterm2 SplitPaneDimmingAmount -float 0.15
-
-# Advanced: Scroll wheel sends arrow keys when in alternate screen mode. (ie. scrolling in bat)
-defaults write com.googlecode.iterm2 AlternateMouseScroll -int 1
-
-# Profiles/Window: Settings for New Windows
-/usr/libexec/PlistBuddy -c "set 'New Bookmarks':0:'Rows' 26" ~/Library/Preferences/com.googlecode.iterm2.plist
-
-# Profiles/Terminal: Scrollback Buffer (10000 lines)
-/usr/libexec/PlistBuddy -c "set 'New Bookmarks':0:'Scrollback Lines' 10000" ~/Library/Preferences/com.googlecode.iterm2.plist
-
-# Profiles/Text: Enable Blinking Cursor
-/usr/libexec/PlistBuddy -c "set 'New Bookmarks':0:'Blinking Cursor' 1" ~/Library/Preferences/com.googlecode.iterm2.plist
-
-# Profile/Colors: Snazzy Theme
-defaults read com.googlecode.iterm2 | grep -q "Snazzy" ||
-  (curl -Ls https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors > /tmp/Snazzy.itermcolors && open /tmp/Snazzy.itermcolors)
-
-{{ end -}}
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
