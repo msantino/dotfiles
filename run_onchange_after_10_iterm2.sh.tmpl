@@ -1,7 +1,7 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
-# iterm2 hash: {{ include "iterm2/iterm.plist" | sha256sum }}
+# iterm2 hash: {{ include "iterm2/iterm2.plist" | sha256sum }}
 
 set -eufo pipefail
 
