@@ -29,7 +29,7 @@ defaults write com.apple.dock autohide -int 1
 defaults write com.apple.dock tilesize -int 44
 
 # Set the icon magnification size of Dock items to 85 pixels
-defaults write com.apple.dock tilesize -int 85
+defaults write com.apple.dock largesize -int 85
 
 
 #################################################
