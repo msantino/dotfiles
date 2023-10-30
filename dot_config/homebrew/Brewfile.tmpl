@@ -37,18 +37,22 @@ cask "setapp"
 cask "google-drive"
 
 # Requires password in prompt
+{{- if (not .mode "test") }}
 cask "microsoft-office"
 cask "zoom"
+{{ end }}
 
 
 # Additional apps
-#mas '1Password', id: 1333542190
-#mas 'WhatsApp Desktop', id: 1147396723
-#mas 'Telegram', id: 747648890
-#mas 'HP Smart for Desktop', id: 1474276998
-#mas 'Todoist: To do list e tarefas', id: 585829637
-#mas 'Okta Verify', id: 490179405
-#mas 'Xcode', id: 497799835
+{{- if (not .mode "test") }}
+mas '1Password', id: 1333542190
+mas 'WhatsApp Desktop', id: 1147396723
+mas 'Telegram', id: 747648890
+mas 'HP Smart for Desktop', id: 1474276998
+as 'Todoist: To do list e tarefas', id: 585829637
+mas 'Okta Verify', id: 490179405
+mas 'Xcode', id: 497799835
+{{ end }}
 
 vscode "erd0s.terraform-autocomplete"
 vscode "hashicorp.terraform"

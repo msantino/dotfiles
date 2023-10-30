@@ -76,6 +76,7 @@ defaults write NSGlobalDomain com.apple.trackpad.scaling -float 0.875
 defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 
 defaults write "Apple Global Domain" com.apple.swipescrolldirection -int 0
+defaults write NSGlobalDomain com.apple.swipescrolldirection -int 0
 
 #################################################
 # Terminal                                      #
