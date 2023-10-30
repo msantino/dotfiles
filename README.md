@@ -13,7 +13,7 @@ To apply dotfiles in a new macOS computer, that's the steps:
 1. Install Homebrew
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2. Install chezmoi, git and github client
