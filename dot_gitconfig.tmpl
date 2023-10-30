@@ -1,6 +1,8 @@
-# This is Git's per-user configuration file.
 [user]
 	name = Marcelo Santino
 	email = "{{ .email }}"
+	signingKey = {{ .chezmoi.homeDir }}/.ssh/id_rsa.pub
+[gpg]
+	format = ssh
 [pull]
 	rebase = false

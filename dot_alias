@@ -1,14 +1,6 @@
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home
-export ANDROID_HOME=/Users/msantino/Library/Android/sdk
-export PATH=$PATH:/Users/msantino/Library/Android/sdk/platform-tools
-
-# Astransp
-alias ssh-astransp="ssh -L 1521:localhost:1521 -o TCPKeepAlive=yes -o ServerAliveInterval=50 -i ~/.ssh/dba-santino.pem -p2221 oracle@200.195.72.106"
-alias ssh-astransp-antigo="ssh -L 1521:localhost:1521 -o TCPKeepAlive=yes -o ServerAliveInterval=50 -i ~/.ssh/dba-santino.pem -p2214 oracle@200.195.72.106"
-alias ssh-astransp-backup="ssh -L 1521:localhost:1521 -o TCPKeepAlive=yes -o ServerAliveInterval=50 -i ~/.ssh/dba-santino.pem -p2210 oracle@200.195.72.106"
-
 alias dc-up="docker-compose up"
 alias dc-down="docker-compose down"
 alias dc-build="docker-compose build"
+
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

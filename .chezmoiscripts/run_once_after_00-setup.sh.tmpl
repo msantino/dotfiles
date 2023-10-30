@@ -17,17 +17,5 @@ if [ ! -f ~/.oh-my-zsh/oh-my-zsh.sh ]; then
   (echo '💰  Installing oh-my-zsh' && yes | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)")
 fi
 
-# Install chezmoi
-command -v chezmoi >/dev/null 2>&1 || \
-  (echo '👊  Installing chezmoi' && brew install chezmoi)
-
-if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
-  echo "🚸  chezmoi already initialized"
-  echo "    Reinitialize with: 'chezmoi init git@github.com:msantino/dotfiles.git'"
-else
-  echo "🚀  Initialize dotfiles with:"
-  echo "    chezmoi init git@github.com:msantino/dotfiles.git"
-fi
-
 echo ""
 echo "Done."
