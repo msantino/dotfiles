@@ -34,12 +34,12 @@ cask "kdiff3"
 cask "spotify"
 cask "backblaze"
 cask "setapp"
-cask "google-drive"
+cask "zoom"
 
 # Requires password in prompt
 {{- if (ne .mode "test") }}
 cask "microsoft-office"
-cask "zoom"
+cask "google-drive"
 {{ end }}
 
 
