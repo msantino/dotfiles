@@ -37,14 +37,14 @@ cask "setapp"
 cask "google-drive"
 
 # Requires password in prompt
-{{- if (not eq .mode "test") }}
+{{- if (!eq .mode "test") }}
 cask "microsoft-office"
 cask "zoom"
 {{ end }}
 
 
 # Additional apps
-{{- if (not eq .mode "test") }}
+{{- if (!eq .mode "test") }}
 mas '1Password', id: 1333542190
 mas 'WhatsApp Desktop', id: 1147396723
 mas 'Telegram', id: 747648890
