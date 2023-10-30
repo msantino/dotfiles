@@ -1,14 +1,14 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
-# Brewfile hash: {{ include ".config/brew/Brewfile.tmpl" | sha256sum }}
+# Brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
 
 set -eufo pipefail
 
 brew update
 
 brew tap Homebrew/bundle
-brew bundle --file="$HOME/.config/brew/Brewfile"
+brew bundle
 
 brew cleanup
 {{ end }}
