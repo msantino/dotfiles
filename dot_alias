@@ -2,5 +2,7 @@ alias dc-up="docker-compose up"
 alias dc-down="docker-compose down"
 alias dc-build="docker-compose build"
 
+alias pip="pip3"
+
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
