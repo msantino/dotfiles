@@ -14,6 +14,7 @@ brew "openjdk"
 brew "telnet"
 brew "tfenv"
 brew "wget"
+brew "watch"
 brew "yarn"
 brew "awscli"
 
@@ -24,7 +25,6 @@ cask "docker"
 cask "visual-studio-code"
 cask "iterm2"
 cask "alfred"
-cask "google-chrome"
 cask "slack"
 cask "sublime-text"
 cask "skype"
@@ -42,6 +42,13 @@ cask "microsoft-office"
 cask "google-drive"
 {{ end }}
 
+{{- if (eq .mode "work") }}
+brew install astro
+{{ end }}
+
+{{- if (ne .mode "work") }}
+cask "google-chrome"
+{{ end }}
 
 # Additional apps
 {{- if (ne .mode "test") }}
