@@ -43,7 +43,7 @@ cask "google-drive"
 {{ end }}
 
 {{- if (eq .mode "work") }}
-brew astro
+brew "astro"
 {{ end }}
 
 {{- if (ne .mode "work") }}
