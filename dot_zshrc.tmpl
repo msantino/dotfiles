@@ -120,3 +120,8 @@ export DOCKER_BUILDKIT=0
 export DOCKER_HOST=ssh://msantino@camarao
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Mysql client
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export MYSQLCLIENT_CFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export MYSQLCLIENT_LDFLAGS="-I/opt/homebrew/opt/mysql-client/include"
