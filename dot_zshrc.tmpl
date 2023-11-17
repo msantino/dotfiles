@@ -118,8 +118,8 @@ export PYTHONDONTWRITEBYTECODE=1
 export PATH=$PATH:/Applications/PyCharm.app/Contents/MacOS
 export DOCKER_BUILDKIT=0
 export DOCKER_HOST=ssh://msantino@camarao
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export MYSQLCLIENT_LDFLAGS=$(pkg-config --libs mysqlclient)
+export MYSQLCLIENT_CFLAGS=$(pkg-config --cflags mysqlclient)
 
 # Mysql client
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
