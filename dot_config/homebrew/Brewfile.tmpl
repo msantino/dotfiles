@@ -50,9 +50,7 @@ cask "google-drive"
 brew "astro"
 {{ end }}
 
-{{- if (ne .mode "work") }}
 cask "google-chrome"
-{{ end }}
 
 # Additional apps
 {{- if (ne .mode "test") }}
