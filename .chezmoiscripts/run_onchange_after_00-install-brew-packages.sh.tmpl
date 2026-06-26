@@ -1,14 +1,18 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
-# Brewfile hash: {{ include "dot_config/homebrew/Brewfile.tmpl" | sha256sum }}
+# Brewfile hash: {{ include "dot_config/homebrew/Brewfile" | sha256sum }}
 
 set -eufo pipefail
 
 brew update
 
-brew tap Homebrew/bundle
-brew bundle --file {{ .chezmoi.homeDir }}/.config/homebrew/Brewfile
+brew tap homebrew/bundle 2>/dev/null || true
+
+# Don't let a single licensed/unavailable cask abort the whole bootstrap;
+# brew bundle reports failures at the end and exits non-zero.
+brew bundle --file "{{ .chezmoi.homeDir }}/.config/homebrew/Brewfile" || \
+  echo "⚠️  Some brew bundle entries failed — review the output above and install them manually."
 
 brew cleanup
 {{ end }}
