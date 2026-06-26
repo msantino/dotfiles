@@ -55,7 +55,6 @@ brew "yarn"
 # Containers / virtualization
 ###############################################################################
 cask "orbstack"            # replaces docker + docker-desktop
-cask "parallels"
 cask "virtualbuddy"
 cask "crystalfetch"
 
@@ -85,7 +84,7 @@ cask "alfred"
 cask "setapp"
 cask "notion"
 cask "linear"
-cask "todoist"
+cask "todoist-app"        # renamed from "todoist"
 
 ###############################################################################
 # Communication
@@ -122,7 +121,7 @@ cask "microsoft-auto-update"
 cask "elgato-stream-deck"
 cask "displaylink"
 cask "windows-app"        # Microsoft Remote Desktop / Windows App
-cask "ledger-live"
+cask "ledger-wallet"      # renamed from "ledger-live"
 
 ###############################################################################
 # VS Code extensions
@@ -158,6 +157,8 @@ vscode "tomoki1207.pdf"
 ###############################################################################
 # NOT installable via Homebrew — install manually on the new Mac:
 #   - Adobe Creative Cloud (Photoshop, Premiere, Media Encoder) — Adobe licensing
+#   - Parallels Desktop    — cask postinstall chown fails (Operation not
+#                            permitted); install from vendor with your license
 #   - FileZilla            — no maintained cask (config copied via rsync)
 #   - Fireflies            — no cask
 #   - Okta Verify          — App Store / org MDM
