@@ -5,6 +5,15 @@
 
 set -eufo pipefail
 
+# Ask for the admin password ONCE, then keep the sudo timestamp warm in the
+# background so the many cask installs don't each re-prompt. The keep-alive
+# exits with this script (kill -0 on our PID), and the trap tidies it up.
+echo "🔐  Some casks need admin rights — enter your macOS password once:"
+sudo -v
+( while true; do sudo -n true; sleep 50; kill -0 "$$" 2>/dev/null || exit; done ) >/dev/null 2>&1 &
+SUDO_KEEPALIVE_PID=$!
+trap 'kill "$SUDO_KEEPALIVE_PID" 2>/dev/null || true' EXIT
+
 brew update
 
 brew tap homebrew/bundle 2>/dev/null || true
