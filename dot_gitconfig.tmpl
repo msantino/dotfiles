@@ -8,3 +8,6 @@
 	rebase = true
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:{{ .chezmoi.homeDir }}/workspace/santino/mfsantino/interativ/codybrickwall/"]
+	path = {{ .chezmoi.homeDir }}/.gitconfig-codybrickwall
