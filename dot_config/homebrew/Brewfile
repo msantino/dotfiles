@@ -44,7 +44,7 @@ brew "python@3.11"
 brew "railway"
 brew "redis"
 brew "rsync"
-brew "supabase/tap/supabase"
+brew "supabase/tap/supabase", trusted: true
 brew "telnet"
 brew "tesseract-lang"
 brew "tfenv"
