@@ -112,7 +112,8 @@ cask "spotify"
 # Cloud / storage / backup
 ###############################################################################
 cask "google-drive"
-cask "onedrive"
+# OneDrive ships with the microsoft-office cask below; the standalone
+# "onedrive" cask conflicts with it, so it is intentionally NOT listed here.
 cask "backblaze"
 cask "aws-vpn-client"
 cask "qfinder-pro"        # QNAP NAS
